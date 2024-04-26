@@ -2,6 +2,7 @@
 
 public class Expense : MoneyMovement
 {
+    public int ExpenseId { get; set; }
     public enum Type
     {
         Credit,
