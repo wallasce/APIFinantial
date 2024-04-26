@@ -1,4 +1,4 @@
-﻿namespace APIFinantial.Controllers.Models;
+﻿namespace APIFinantial.Models;
 
 public class Income : MoneyMovement
 {

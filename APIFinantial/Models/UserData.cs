@@ -1,6 +1,6 @@
-﻿namespace APIFinantial.Controllers.Models;
+﻿namespace APIFinantial.Models;
 
-public class UserData 
+public class UserData
 {
     public int UserDataId { get; set; }
     public List<Account>? Accounts { get; set; }
