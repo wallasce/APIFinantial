@@ -6,7 +6,8 @@ public class Account
     public required string Bank { get; set; }
     public double Balance { get; set; }
 
-    public List<MoneyMovement>? MoneyMovements { get; set; }
+    public ICollection<MoneyMovement> MoneyMovements { get; set; }
 
-    public UserData? OwnerAccount { get; set; }
+    public int UserDateID { get; set; }
+    public UserData OwnerAccount { get; set; }
 }
