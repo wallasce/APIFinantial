@@ -11,6 +11,7 @@ public class AppDbContext : DbContext
     {
     }
     public DbSet<Category> Categories { get; set; }
+    public DbSet<MoneyMovement> MoneyMovements { get; set; }
     public DbSet<Expense> Expenses { get; set; }
     public DbSet<Income> Incomes { get; set; }
     public DbSet<Account> Accounts { get; set; }
