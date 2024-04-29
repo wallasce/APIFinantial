@@ -9,6 +9,10 @@ public class UserData
 {
     [Key]
     public int UserDataId { get; set; }
+
+    [Required]
+    [StringLength(50)]
+    public string Name { get; set; }
     public ICollection<Account> Accounts { get; set; }
 
     public UserData()
