@@ -4,6 +4,7 @@ using APIFinantial.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIFinantial.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240429184039_PopuleCategories")]
+    partial class PopuleCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +51,7 @@ namespace APIFinantial.Migrations
 
                     b.HasIndex("OwnerAccountUserDataId");
 
-                    b.ToTable("Accounts", (string)null);
+                    b.ToTable("Accounts");
                 });
 
             modelBuilder.Entity("APIFinantial.Models.Category", b =>
@@ -69,7 +72,7 @@ namespace APIFinantial.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("APIFinantial.Models.MoneyMovement", b =>
@@ -111,7 +114,7 @@ namespace APIFinantial.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("MoneyMovements", (string)null);
+                    b.ToTable("MoneyMovements");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("MoneyMovement");
 
@@ -128,7 +131,7 @@ namespace APIFinantial.Migrations
 
                     b.HasKey("UserDataId");
 
-                    b.ToTable("UserDatas", (string)null);
+                    b.ToTable("UserDatas");
                 });
 
             modelBuilder.Entity("APIFinantial.Models.Expense", b =>
