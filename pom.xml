@@ -11,8 +11,8 @@
 	<groupId>com.api</groupId>
 	<artifactId>finantial</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>finantial</name>
-	<description>API for Finantial Project</description>
+	<name>financial</name>
+	<description>API for Financial Project</description>
 	<url/>
 	<licenses>
 		<license/>
